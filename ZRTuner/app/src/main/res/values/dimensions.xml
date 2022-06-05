@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="noteTextSize">60sp</dimen>
+    <dimen name="numbersTextSize">20sp</dimen>
+    <dimen name="gaugeSize">2sp</dimen>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="zrtuner_spinner_style" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+
+    </style>
+
+    <style name="zrtuner_toolbar_style">
+        <item name="android:textColorPrimary">@color/fer_white</item>
+        <item name="android:backgroundTint">@color/fer_gray</item>
+    </style>
+
+    <style name="zrtuner_seekbar_style">
+        <item name="android:progressTint">@color/fer_orange</item>
+        <item name="android:progressBackgroundTint">@color/fer_gray</item>
+        <item name="android:thumbTint">@color/fer_orange</item>
+    </style>
+
+</resources>

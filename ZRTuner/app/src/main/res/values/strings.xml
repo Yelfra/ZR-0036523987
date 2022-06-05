@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ZRTuner</string>
+
+    <string-array name="tuning_array">
+        <item>Chromatic</item>
+        <item>Standard</item>
+        <item>Drop D</item>
+        <item>Open G</item>
+    </string-array>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="action_settings">SETTINGS</string>
+
+    <!-- Reference Pitch -->
+    <string name="action_set_reference_pitch">Set reference pitch</string>
+
+</resources>
