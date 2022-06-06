@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {4.1}Frekvencijski raspon}{6}{}%
 \contentsline {section}{\numberline {4.2}Frekvencijski spektri}{7}{}%
 \contentsline {chapter}{\numberline {5}Digitalna obrada signala}{11}{}%
-\contentsline {section}{\numberline {5.1}\textit {Sampling}}{11}{}%
+\contentsline {section}{\numberline {5.1}\textit {Uzorkovanje}}{11}{}%
 \contentsline {chapter}{\numberline {6}Algoritam brze Fourierove transformacije - FFT}{13}{}%
 \contentsline {section}{\numberline {6.1}Način rada FFT}{13}{}%
 \contentsline {section}{\numberline {6.2}Problemi FFT-a}{14}{}%
