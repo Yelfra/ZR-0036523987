@@ -77,4 +77,19 @@ Mary Lourde and Anjali~Kuppayil Saji.
 Sample rate, bit depth and buffer size explained – focusrite audio ..., Jan
   2022.
 
+\bibitem{de2002yin}
+Alain De~Cheveign{\'e} and Hideki Kawahara.
+\newblock Yin, a fundamental frequency estimator for speech and music.
+\newblock {\em The Journal of the Acoustical Society of America},
+  111(4):1917--1930, 2002.
+
+\bibitem{six2014tarsosdsp}
+Joren Six, Olmo Cornelis, and Marc Leman.
+\newblock {TarsosDSP, a Real-Time Audio Processing Framework in Java}.
+\newblock In {\em {Proceedings of the 53rd AES Conference (AES 53rd)}}, 2014.
+
+\bibitem{six_cornelis_lerman}
+Joren Six, Olmo Cornelis, and Marc Lerman.
+\newblock Tarsosdsp: A real-time audio processing framework in java.
+
 \end{thebibliography}

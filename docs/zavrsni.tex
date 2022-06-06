@@ -5,6 +5,7 @@
 \graphicspath{{./prikazi/}}
 \bibliographystyle{unsrt}
 \usepackage[superscript, biblabel]{cite}
+
 %\usepackage{biblatex}
 %\addbibresource{literatura.bib}
 
@@ -26,7 +27,7 @@
 \includepdf[pages={1}]{izvornik.pdf}
 
 % Dodavanje zahvale ili prazne stranice. Ako ne želite dodati zahvalu, naredbu ostavite radi prazne stranice.
-\zahvala{}
+\zahvala{Zahvala mentoru prof. dr. sc. Ivanu Đureku što je pružio mogućnost vlastitog izbora teme i dopustio rad vlastitim tempom.}
 
 \tableofcontents
 
@@ -206,7 +207,7 @@ Primjena digitalne obrade signala omogućuje mnoge prednosti u odnosu na analogn
 
 U ovome radu digitalna obrada signala odnosi se isključivo na obradu snimljenog zvučnog signala.
 
-\section{\textit{Uzorkovanje}}
+\section{Uzorkovanje}
 %Sampling
 U kontekstu obrade zvučnog signala, uzorkovanje (eng. \textit{sampling}) je pretvorba zvučnog vala u slijed "uzoraka". Uzorak (eng. \textit{sample}) je vrijednost signala u točki u vremenu i/ili prostoru. Sklop za uzorkovanje (eng. \textit{Sampler}) je operacija ili sustav koji izvlači uzorke iz "kontinuiranog" signala. Cilj sklopa za uzorkovanje je zabilježiti uzorke ekvivalentne njihovim trenutnim vrijednostima u signalu. 
 
@@ -218,7 +219,7 @@ Najčešće frekvencije uzorkovanja su 44,1 kHz, 48 kHz, 88,2 kHz ili 96 kHz.\ci
 %FFT
 Aplikacija \textit{Spectroid} za detekciju frekvencija koristi algoritam brze Fourierove transformacije (eng. \textit{Fast Fourier Transform} - \textit{FFT}). Algoritam FFT pretvara signal u skup brojeva pomoću kojeg se da raspoznati najzastupljenije frekvencije u signalu. Sposobnost FFT-a da podijeli zvučni signal u frekvencije od kojih se sastoji ga čini jako korisnom metodom koja se često koristi u praksi obrade zvučnih signala.\cite{gustine_2021}
 
-\section{Način rada FFT}
+\section{Način rada FFT-a}
 %nacin rada fft
 Obradom signala pomoću FFT-a, na izlazu se dobiva slijed brojeva u nizu koji predstavlja domenu frekvencija obrađenog signala, npr.:
 \begin{verbatim}
@@ -245,7 +246,33 @@ U navedenome primjeru izračunata je rezolucija od 46,875 Hz po uzorku. Ako se u
 %problem ffta naveden u 4.2
 U poglavlju 4.2 spomenut je problem pri detekciji temeljne frekvencije signala. Na slici 4.1 temeljna frekvencija note $E_2$ je 82,41 Hz, ali nije najvećeg intenziteta. Stoga se ne može pouzdati na prepoznavanje temeljne frekvencije preko one s najvećim intenzitetom. Ova pojava može izazvati veliki problem u sustavu koji bi trebao prepoznati visinu tona odsvirane note.
 
-Budući da algoritam FFT sam po sebi nije dovoljno dobar alat za cilj koji ovaj rad nastoji ostvariti, mora se koristiti kompleksniji algoritam.
+Budući da algoritam FFT sam po sebi nije dovoljno dobar alat za cilj koji ovaj rad nastoji ostvariti, mora se koristiti kompleksniji algoritam. U primjeru ovog rada, koristit će se algoritam YIN.
+
+\chapter{Algoritam YIN}
+YIN (nadahnuto filozofijom \textit{yin} i \textit{yang}) algoritam temelji se na metodi autokorelacije (eng. \textit{autocorrelation function} - \textit{ACF}) s brojnim izmjenama koje se kombiniraju kako bi se spriječila pojava grešaka. Algoritam ima nekoliko poželjnih značajki. Učestalost grešaka je oko tri puta manja od najboljih konkurentskih metoda; algoritam je prikladan za glazbu i visoke tonove te je jednostavan za implementaciju, s niskim kašnjenjem (eng. \textit{latency}).\cite{de2002yin}
+
+\section{Metoda autokorelacije}
+Autokorelacija je korelacija signala s odgođenom kopijom samog sebe kao funkcija kašnjenja.\cite{de2002yin} Koristi se kao alat za pronalaženje ponavljajućih obrazaca, kao što je identificiranje temeljne frekvencije u signalu među njegovim harmonicima. U obradi signala metoda unakrsne korelacije (eng. \textit{cross-correlation}) koristi se za usporedbu dvaju signala i određivanje njihove sličnosti. Autokorelacija je slična, samo što usporedbu čini nad jednim te istim signalom.
+
+Funkcija autokorelacije može se izraziti kao:
+\begin{equation}
+	r_t(\tau) = \sum_{j=t+1}^{t+W} (x_jx_{j+\tau'})\\
+\end{equation}
+pri čemu je $\tau$ kašnjenje (eng. \textit{lag}) izračunato u vremenskom indeksu $t$, a $W$ je integral veličine prozora.\cite{de2002yin}
+
+%
+
+\chapter{Aplikacija ZRTuner}
+Kao primjer primjene digitalne obrade signala, odnosno detekcije temeljne frekvencije zvuka, u sklopu ovog rada razvijena je aplikacija za štimanje žica gitare za mobilne uređaje (eng. \textit{guitar tuner}).
+
+Aplikacija "ZRTuner" (ili punim nazivom "Završni Rad Tuner") za detekciju odsvirane note koristi YIN algoritam te prikazuje odsviranu notu i relativnu udaljenost njene visine tona s visinom tona najbliže note na kromatskoj ljestvici. Pisana je u integriranom razvojnom okruženju (eng. \textit{Integrated Development Environment} - \textit{IDE}) Android Studio-u u programskom jeziku Java te je namijenjena isključivo za Android platforme.
+
+\section{TarsosDSP}
+Za implementaciju YIN algoritma ZRTuner koristi TarsosDSP, Java biblioteku (eng. \textit{library}) za obradu zvuka.\cite{six2014tarsosdsp}
+
+Cilj biblioteke je pružiti jednostavno sučelje za implementaciju algoritama za obradu zvuka u glazbi pisano u Javi i bez ikakvih drugih vanjskih ovisnosti. Nastoji uravnotežiti kompleksnu funkcionalnost za uspješnu primjenu, s jednostavnosti za demonstraciju kako algoritmi digitalne obrade signala funkcioniraju.\cite{six_cornelis_lerman}
+
+
 
 
 \chapter{Zaključak}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.16)  6 JUN 2022 12:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.16)  6 JUN 2022 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -303,7 +303,7 @@ LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 LaTeX Info: Redefining \cite on input line 441.
 )
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 11
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 12
 .
 
 (c:/texlive/2021/texmf-dist/tex/latex/psnfss/t1ptm.fd
@@ -333,20 +333,20 @@ LaTeX Warning: Label `fig' multiply defined.
 )
 \openout1 = `zavrsni.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -445,19 +445,19 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 22
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 23
 .
 
 (c:/texlive/2021/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
 
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
 
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -468,41 +468,41 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <izvornik.pdf, id=8, 597.23125pt x 845.1575pt>
 File: izvornik.pdf Graphic file (type pdf)
 <use izvornik.pdf>
-Package pdftex.def Info: izvornik.pdf  used on input line 26.
+Package pdftex.def Info: izvornik.pdf  used on input line 27.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: izvornik.pdf Graphic file (type pdf)
 <use izvornik.pdf>
-Package pdftex.def Info: izvornik.pdf  used on input line 26.
+Package pdftex.def Info: izvornik.pdf  used on input line 27.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 <izvornik.pdf, id=11, page=1, 597.23125pt x 845.1575pt>
 File: izvornik.pdf Graphic file (type pdf)
 <use izvornik.pdf, page 1>
-Package pdftex.def Info: izvornik.pdf , page1 used on input line 26.
+Package pdftex.def Info: izvornik.pdf , page1 used on input line 27.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: izvornik.pdf Graphic file (type pdf)
 <use izvornik.pdf, page 1>
-Package pdftex.def Info: izvornik.pdf , page1 used on input line 26.
+Package pdftex.def Info: izvornik.pdf , page1 used on input line 27.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: izvornik.pdf Graphic file (type pdf)
 <use izvornik.pdf, page 1>
-Package pdftex.def Info: izvornik.pdf , page1 used on input line 26.
+Package pdftex.def Info: izvornik.pdf , page1 used on input line 27.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: izvornik.pdf Graphic file (type pdf)
 <use izvornik.pdf, page 1>
-Package pdftex.def Info: izvornik.pdf , page1 used on input line 26.
+Package pdftex.def Info: izvornik.pdf , page1 used on input line 27.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: izvornik.pdf Graphic file (type pdf)
 <use izvornik.pdf, page 1>
-Package pdftex.def Info: izvornik.pdf , page1 used on input line 26.
+Package pdftex.def Info: izvornik.pdf , page1 used on input line 27.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
  [1 <./izvornik.pdf>] [3]
-(./zavrsni.toc)
+(./zavrsni.toc [4
+
+])
 \tf@toc=\write3
 \openout3 = `zavrsni.toc'.
 
- [4
-
-]
+ [5]
 Poglavlje 1.
 [1
 
@@ -515,7 +515,7 @@ Poglavlje 3.
 [3
 
 ]
-Overfull \hbox (8.88434pt too wide) in paragraph at lines 81--84
+Overfull \hbox (8.88434pt too wide) in paragraph at lines 82--85
  [] 
  []
 
@@ -526,40 +526,40 @@ Poglavlje 4.
 ] [7
 
 ]
-<./prikazi//spektrogram_e2.jpg, id=67, 502.0356pt x 242.5863pt>
+<./prikazi//spektrogram_e2.jpg, id=70, 502.0356pt x 242.5863pt>
 File: ./prikazi//spektrogram_e2.jpg Graphic file (type jpg)
 <use ./prikazi//spektrogram_e2.jpg>
-Package pdftex.def Info: ./prikazi//spektrogram_e2.jpg  used on input line 167.
+Package pdftex.def Info: ./prikazi//spektrogram_e2.jpg  used on input line 168.
 
 (pdftex.def)             Requested size: 412.56497pt x 199.35143pt.
-<./prikazi//spektrogram_a2.jpg, id=68, 502.0356pt x 242.5863pt>
+<./prikazi//spektrogram_a2.jpg, id=71, 502.0356pt x 242.5863pt>
 File: ./prikazi//spektrogram_a2.jpg Graphic file (type jpg)
 <use ./prikazi//spektrogram_a2.jpg>
-Package pdftex.def Info: ./prikazi//spektrogram_a2.jpg  used on input line 172.
+Package pdftex.def Info: ./prikazi//spektrogram_a2.jpg  used on input line 173.
 
 (pdftex.def)             Requested size: 412.56497pt x 199.35143pt.
-<./prikazi//spektrogram_d3.jpg, id=69, 502.0356pt x 242.5863pt>
+<./prikazi//spektrogram_d3.jpg, id=72, 502.0356pt x 242.5863pt>
 File: ./prikazi//spektrogram_d3.jpg Graphic file (type jpg)
 <use ./prikazi//spektrogram_d3.jpg>
-Package pdftex.def Info: ./prikazi//spektrogram_d3.jpg  used on input line 177.
+Package pdftex.def Info: ./prikazi//spektrogram_d3.jpg  used on input line 178.
 
 (pdftex.def)             Requested size: 412.56497pt x 199.35143pt.
-<./prikazi//spektrogram_g3.jpg, id=70, 502.0356pt x 242.5863pt>
+<./prikazi//spektrogram_g3.jpg, id=73, 502.0356pt x 242.5863pt>
 File: ./prikazi//spektrogram_g3.jpg Graphic file (type jpg)
 <use ./prikazi//spektrogram_g3.jpg>
-Package pdftex.def Info: ./prikazi//spektrogram_g3.jpg  used on input line 182.
+Package pdftex.def Info: ./prikazi//spektrogram_g3.jpg  used on input line 183.
 
 (pdftex.def)             Requested size: 412.56497pt x 199.35143pt.
-<./prikazi//spektrogram_b3.jpg, id=71, 502.0356pt x 242.5863pt>
+<./prikazi//spektrogram_b3.jpg, id=74, 502.0356pt x 242.5863pt>
 File: ./prikazi//spektrogram_b3.jpg Graphic file (type jpg)
 <use ./prikazi//spektrogram_b3.jpg>
-Package pdftex.def Info: ./prikazi//spektrogram_b3.jpg  used on input line 187.
+Package pdftex.def Info: ./prikazi//spektrogram_b3.jpg  used on input line 188.
 
 (pdftex.def)             Requested size: 412.56497pt x 199.35143pt.
-<./prikazi//spektrogram_e4.jpg, id=72, 502.0356pt x 242.5863pt>
+<./prikazi//spektrogram_e4.jpg, id=75, 502.0356pt x 242.5863pt>
 File: ./prikazi//spektrogram_e4.jpg Graphic file (type jpg)
 <use ./prikazi//spektrogram_e4.jpg>
-Package pdftex.def Info: ./prikazi//spektrogram_e4.jpg  used on input line 192.
+Package pdftex.def Info: ./prikazi//spektrogram_e4.jpg  used on input line 193.
 
 (pdftex.def)             Requested size: 412.56497pt x 199.35143pt.
  [8 <./prikazi//spektrogram_e2.jpg> <./prikazi//spektrogram_a2.jpg>]
@@ -572,47 +572,56 @@ Poglavlje 5.
 ] [12]
 Poglavlje 6.
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 22
-4.
+5.
 (c:/texlive/2021/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [13
 
 ] [14]
 Poglavlje 7.
-(./zavrsni.bbl [15
+[15
 
-] [16
+]
+Poglavlje 8.
+[16
 
-]) [17] [18] (./zavrsni.aux)
+]
+Poglavlje 9.
+(./zavrsni.bbl [17
+
+] [18
+
+]) [19] [20] (./zavrsni.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8847 strings out of 478371
- 143808 string characters out of 5852527
- 461234 words of memory out of 5000000
- 26782 multiletter control sequences out of 15000+600000
- 461609 words of font info for 97 fonts, out of 8000000 for 9000
+ 8853 strings out of 478371
+ 143981 string characters out of 5852527
+ 461282 words of memory out of 5000000
+ 26790 multiletter control sequences out of 15000+600000
+ 458841 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,17n,77p,757b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c
-:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive
-/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2021/texmf-dist
-/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/ur
-w/helvetic/uhvr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.
-pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2
-021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2021/texmf-dist/fon
-ts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni.pdf (22 pages, 2664038 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fo
+nts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/he
+lvetic/uhvb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.p
+fb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/202
+1/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2021/texmf-dist/fonts
+/type1/urw/times/utmri8a.pfb>
+Output written on zavrsni.pdf (25 pages, 2681195 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 187 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

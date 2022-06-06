@@ -78,8 +78,5 @@
     <requires type="dynamic">
       <file>zavrsni.bcf</file>
     </requires>
-    <requires type="editable">
-      <file>literatura.bib</file>
-    </requires>
   </external>
 </requests>
