@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.16)  7 JUN 2022 18:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.16)  7 JUN 2022 19:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -303,6 +303,17 @@ LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 LaTeX Info: Redefining \cite on input line 441.
 )
+(c:/texlive/2021/texmf-dist/tex/latex/cprotect/cprotect.sty
+Package: cprotect 2011/01/27 v1.0e (Bruno Le Floch)
+
+(c:/texlive/2021/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+\CPT@WriteOut=\write3
+\c@CPT@WriteCount=\count290
+\c@CPT@numB=\count291
+\CPT@commandatend@toks=\toks29
+)
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 12
 .
 
@@ -311,10 +322,13 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
+\l__color_backend_stack_int=\count292
 \l__pdf_internal_box=\box55
 )
 (./zavrsni.aux
+
+LaTeX Warning: Label `fig' multiply defined.
+
 
 LaTeX Warning: Label `fig' multiply defined.
 
@@ -405,51 +419,21 @@ LaTeX Font Info:    ... okay on input line 12.
 
 (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
+\scratchcounter=\count293
 \scratchdimen=\dimen188
 \scratchbox=\box56
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count294
+\nofMPsegments=\count294
+\nofMParguments=\count295
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count296
 \MPscratchDim=\dimen189
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
+\everyMPtoPDFconversion=\toks31
 ) (c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-(c:/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-(c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-(c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-
-(c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))
-(c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -520,8 +504,8 @@ Package pdftex.def Info: izvornik.pdf , page1 used on input line 27.
 (./zavrsni.toc [4
 
 ])
-\tf@toc=\write3
-\openout3 = `zavrsni.toc'.
+\tf@toc=\write4
+\openout4 = `zavrsni.toc'.
 
  [5]
 Poglavlje 1.
@@ -667,13 +651,15 @@ Overfull \hbox (0.24344pt too wide) in paragraph at lines 327--328
 [24
 
 ]
-<./prikazi//startRecording.png, id=140, 537.50812pt x 234.1247pt>
-File: ./prikazi//startRecording.png Graphic file (type png)
-<use ./prikazi//startRecording.png>
-Package pdftex.def Info: ./prikazi//startRecording.png  used on input line 334.
-
+<./prikazi//kod_startRecording.png, id=140, 537.50812pt x 234.1247pt>
+File: ./prikazi//kod_startRecording.png Graphic file (type png)
+<use ./prikazi//kod_startRecording.png>
+Package pdftex.def Info: ./prikazi//kod_startRecording.png  used on input line 
+334.
 (pdftex.def)             Requested size: 412.56497pt x 179.7014pt.
+\openout3 = `zavrsni-1.cpt'.
 
+ (./zavrsni-1.cpt) (./zavrsni-1.cpt)
 Overfull \hbox (2.81233pt too wide) in paragraph at lines 340--341
 \T1/ptm/m/n/12 cesa pri-vatne klase [][]\T1/pcr/m/n/12 PitchListener[]\T1/ptm/m
 /n/12 . [][]\T1/pcr/m/n/12 PitchListener []\T1/ptm/m/n/12 na-s-lje-žuje ap-s-tr
@@ -682,25 +668,43 @@ ak-tnu klasu
 
 [25
 
- <./prikazi//startRecording.png>] [26]
+ <./prikazi//kod_startRecording.png>]
+<./prikazi//kod_PitchListener.png, id=146, 581.17125pt x 679.03688pt>
+File: ./prikazi//kod_PitchListener.png Graphic file (type png)
+<use ./prikazi//kod_PitchListener.png>
+Package pdftex.def Info: ./prikazi//kod_PitchListener.png  used on input line 3
+57.
+(pdftex.def)             Requested size: 412.56497pt x 482.04703pt.
+\openout3 = `zavrsni-2.cpt'.
+
+ (./zavrsni-2.cpt) (./zavrsni-2.cpt)
+Underfull \hbox (badness 1412) in paragraph at lines 358--358
+[]\T1/ptm/b/n/10.95 Kod 8.8: |\T1/ptm/m/n/10.95 Pri-vatna klasa [][]\T1/pcr/m/n
+/10.95 PitchListener []\T1/ptm/m/n/10.95 i me-toda [][]\T1/pcr/m/n/10.95 doInBa
+ckground() []\T1/ptm/m/n/10.95 u klasi
+ []
+
+[26] [27 <./prikazi//kod_PitchListener.png>] [28
+
+]
 Poglavlje 9.
-(./zavrsni.bbl [27
+(./zavrsni.bbl [29
 
-] [28
+] [30
 
-]) [29] [30] (./zavrsni.aux)
+]) [31] [32] (./zavrsni.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8918 strings out of 478371
- 146018 string characters out of 5852527
- 461314 words of memory out of 5000000
- 26845 multiletter control sequences out of 15000+600000
- 459948 words of font info for 96 fonts, out of 8000000 for 9000
+ 8552 strings out of 478371
+ 138438 string characters out of 5852527
+ 454001 words of memory out of 5000000
+ 26486 multiletter control sequences out of 15000+600000
+ 460569 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,17n,77p,1014b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,17n,77p,1014b,632s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1
@@ -715,10 +719,10 @@ lvetic/uhvb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.p
 fb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/202
 1/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2021/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on zavrsni.pdf (35 pages, 3015068 bytes).
+Output written on zavrsni.pdf (37 pages, 3091320 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+ 238 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

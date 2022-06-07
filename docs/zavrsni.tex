@@ -5,7 +5,7 @@
 \graphicspath{{./prikazi/}}
 \bibliographystyle{unsrt}
 \usepackage[superscript, biblabel]{cite}
-
+\usepackage{cprotect}
 %\usepackage{biblatex}
 %\addbibresource{literatura.bib}
 
@@ -249,7 +249,7 @@ U poglavlju 4.2 spomenut je problem pri detekciji temeljne frekvencije signala. 
 Budući da algoritam FFT sam po sebi nije dovoljno dobar alat za cilj koji ovaj rad nastoji ostvariti, mora se koristiti kompleksniji algoritam. U primjeru ovog rada, koristit će se algoritam YIN.
 
 \chapter{Algoritam YIN}
-YIN (nadahnuto filozofijom \textit{yin} i \textit{yang}) algoritam temelji se na metodi autokorelacije (eng. \textit{autocorrelation function} - \textit{ACF}) s brojnim izmjenama koje se kombiniraju kako bi se spriječila pojava grešaka. Algoritam ima nekoliko poželjnih značajki. Učestalost grešaka je oko tri puta manja od najboljih konkurentskih metoda; algoritam je prikladan za glazbu i visoke tonove te je jednostavan za implementaciju, s niskim kašnjenjem (eng. \textit{latency}).\cite{de2002yin}
+YIN (nadahnuto filozofijom \textit{yin} i \textit{yang}) algoritam temelji se na FFT i metodi autokorelacije (eng. \textit{autocorrelation function} - \textit{ACF}) s brojnim izmjenama koje se kombiniraju kako bi se spriječila pojava grešaka. Algoritam ima nekoliko velikih prednosti. Učestalost grešaka je oko tri puta manja od najboljih konkurentskih metoda; algoritam je prikladan za glazbu i visoke tonove te je jednostavan za implementaciju, s niskim kašnjenjem (eng. \textit{latency}).\cite{de2002yin}
 
 \section{Metoda autokorelacije}
 Autokorelacija je korelacija signala s odgođenom kopijom samog sebe kao funkcija kašnjenja.\cite{de2002yin} Koristi se kao alat za pronalaženje ponavljajućih obrazaca, kao što je identificiranje temeljne frekvencije u signalu među njegovim harmonicima. U obradi signala metoda unakrsne korelacije (eng. \textit{cross-correlation}) koristi se za usporedbu dvaju signala i određivanje njihove sličnosti. Autokorelacija je slična, samo što usporedbu čini nad jednim te istim signalom.
@@ -331,8 +331,8 @@ Budući da pri prvome instanciranju fragment te oznake neće biti pronađen (jer
 \clearpage
 \renewcommand{\figurename}{Kod}
 \begin{figure}
-	\centerline{\includegraphics[width=\textwidth]{startRecording.png}}
-	\caption{Stvaranje fragmenta za snimanje zvuka}
+	\centerline{\includegraphics[width=\textwidth]{kod_startRecording.png}}
+	\cprotect\caption{Stvaranje fragmenta za snimanje zvuka u klasi \verb|MainActivty|}
 	\label{fig}
 \end{figure}
 
@@ -341,9 +341,7 @@ Stvaranjem fragmenta \verb|ListenerFragment| pokreće se instanca pozadinskog pr
 
 Metoda \verb|doInBackground| započinje instanciranjem objekta sučelja za rukovanje visinom tona \verb|PitchDetectionHandler| iz biblioteke TarsosDSP te lambda izrazom definira metodu \verb|handlePitch()|. 
 
-!!!Boolean \verb|IS_RECORDING| u početnom je stanju \verb|false| te će se svaki put kada je u stanju \verb|false| izvršiti metoda \verb|publishProgress()|!!!
-
-Klasom \verb|PitchDetectionResult| pomoću metode \verb|getPitch()| dohvaća se detektirana visina tona iz snimljenog bloka zvučnog signala. U slučaju detektirane visine tona instancira se objekt klase \verb|PitchDifference|, koji predstavlja devijaciju snimljene visine tona od njoj najbliže note. Objekt \verb|pitchDifference| preko klase \verb|PitchComparator| metodom \verb|retrieveNote()| dohvaća najbližu notu i devijaciju u visini tona izraženu u centima te ih kao objekt tipa \verb|PitchDifference| stavlja u niz \verb|pitchDifferences|. U trenutku kada se ovaj postupak ponovi barem \verb|MIN_PITCH_COUNT| puta (po potrebi izabrano 8 puta), izračunat će se prosječna visina tona niza \verb|pitchDifferences| te će metodom \verb|publishProgress()| ta vrijednost biti proslijeđena za prikaz korisniku.
+Klasom \verb|PitchDetectionResult| pomoću metode \verb|getPitch()| dohvaća se detektirana visina tona iz snimljenog bloka zvučnog signala. U slučaju detektirane visine tona instancira se objekt klase \verb|PitchDifference|, koji predstavlja devijaciju snimljene visine tona od njoj najbliže note. Objekt \verb|pitchDifference| preko klase \verb|PitchComparator|\cite{gstraube} metodom \verb|retrieveNote()| dohvaća najbližu notu i devijaciju u visini tona izraženu u centima te ih kao objekt tipa \verb|PitchDifference|\cite{gstraube} stavlja u niz \verb|pitchDifferences|. U trenutku kada se ovaj postupak ponovi barem \verb|MIN_PITCH_COUNT| puta (po potrebi izabrano 8 puta), izračunat će se prosječna visina tona niza \verb|pitchDifferences| te će metodom \verb|publishProgress()| ta vrijednost biti proslijeđena za prikaz korisniku. Navedeni prosjek računa se metodom \verb|calculateAverageDifference| klase \verb|Sampler|.
 
 Instanciranjem objekta \verb|pitchDetectionHandler|, njegova vrijednost prosljeđuje se kao argument za instanciranje objekta klase \verb|PitchProcessor| iz biblioteke TarsosDSP, zajedno s enumeracijom YIN algoritma \verb|FFT_YIN|, frekvencijom uzorkovanja \verb|SAMPLE_RATE| tipa \verb|int| i veličinom \textit{buffer}-a \verb|BUFFER_SIZE| tipa \verb|int|. 
 
@@ -354,6 +352,20 @@ Klasa \verb|PitchProcessor| kao implementacija sučelja \verb|AudioProcessor| pr
 Iza instance \verb|pitchProcessor| instancira se objekt klase \verb|AudioDispatcher| koja služi za pretvorbu snimljenih zvučnih signala ili zapisa u obradive blokove. Za specifikaciju izvora zvuka koristi se metodama klase \verb|AudioDispatcherFactory|, u ovom slučaju metode \verb|fromDefaultMicrophone()|, budući da aplikacija obrađuje zvuk snimljen u stvarnom vremenu preko mikrofona na mobilnom uređaju. Kao argumenti joj se proslijeđuju \verb|SAMPLE_RATE|, \verb|BUFFER_SIZE| i veličina preklapanja \verb|OVERLAP| tipa \verb|int|. Veličina preklapanja u ovom slučaju je 3072 uzoraka, što je 75\% veličine \textit{buffer}-a (4096 uzoraka). Drugim riječima, svakih snimljenih 1024 uzoraka, započet će istovremeno snimanje novih 4096 uzoraka. Kao odabir procesora za obradu zvuka, \verb|audioDispatcher| postavlja \verb|pitchProcessor| metodom \verb|addAudioProcessor|. Konačno, snimanje i obrada signala započinje naredbom \verb|audioDispatcher.run()|.
 
 
+\renewcommand{\figurename}{Kod}
+\begin{figure}
+	\centerline{\includegraphics[width=\textwidth]{kod_PitchListener.png}}
+	\cprotect\caption{Privatna klasa \verb|PitchListener| i metoda \verb|doInBackground()| u klasi \verb|ListenerFragment|}
+	\label{fig}
+\end{figure}
+\clearpage
+
+\section{Usporedba sa sličnim aplikacijama}
+Što se tiče mobilnih aplikacija za štimanje gitare, danas ih je tržište puno. To su aplikacije koje uglavnom funkcioniraju na sličan način, bez velike razlike u njihovoj performansi. Radi njihove funkcionalnosti i zadovoljstva među korisnicima, nema velike potrebe za unaprjeđenjem tehnologije koju aplikacije koriste.
+
+Budući da nema prevelike razlike u njihovom načinu rada, najčešće se oslanjaju na dodatne značajke. To su uglavnom implementacije podrške za širi opseg instrumenata, pružanje tečaja za sviranje instrumenata ili mogućnost većeg izbora u izgledu sučelja aplikacije. Stoga aplikacije često služe kao platforma za reklamaciju tuđih ili vlastitih boljih usluga.
+
+Ideja iza aplikacije ZRTuner nije bila samo predstaviti primjer digitalne obrade signala, nego i poslužiti kao jednostavna aplikacija za obavljanje vremenski kratkog zadatka. Motivacija za razvoj aplikacije proizašla je upravo iz većih sličnih aplikacija na tržištu koje otežavaju taj jednostavan zadatak reklamacijom.
 
 
 

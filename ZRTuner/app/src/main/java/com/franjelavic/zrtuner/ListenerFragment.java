@@ -80,9 +80,7 @@ public class ListenerFragment extends Fragment {
 
             audioDispatcher = AudioDispatcherFactory.fromDefaultMicrophone(SAMPLE_RATE,
                     BUFFER_SIZE, OVERLAP);
-
             audioDispatcher.addAudioProcessor(pitchProcessor);
-
             audioDispatcher.run();
 
             return null;
