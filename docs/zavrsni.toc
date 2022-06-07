@@ -20,5 +20,9 @@
 \contentsline {section}{\numberline {7.1}Metoda autokorelacije}{15}{}%
 \contentsline {chapter}{\numberline {8}Aplikacija ZRTuner}{16}{}%
 \contentsline {section}{\numberline {8.1}TarsosDSP}{16}{}%
-\contentsline {chapter}{\numberline {9}Zaključak}{17}{}%
-\contentsline {chapter}{Literatura}{18}{}%
+\contentsline {section}{\numberline {8.2}Značajke sučelja}{16}{}%
+\contentsline {section}{\numberline {8.3}Snimanje i obrada zvuka}{24}{}%
+\contentsline {subsection}{\numberline {8.3.1}Stvaranje fragmenta}{24}{}%
+\contentsline {subsection}{\numberline {8.3.2}Pozadinski proces}{25}{}%
+\contentsline {chapter}{\numberline {9}Zaključak}{27}{}%
+\contentsline {chapter}{Literatura}{28}{}%

@@ -211,13 +211,13 @@ U ovome radu digitalna obrada signala odnosi se isključivo na obradu snimljenog
 %Sampling
 U kontekstu obrade zvučnog signala, uzorkovanje (eng. \textit{sampling}) je pretvorba zvučnog vala u slijed "uzoraka". Uzorak (eng. \textit{sample}) je vrijednost signala u točki u vremenu i/ili prostoru. Sklop za uzorkovanje (eng. \textit{Sampler}) je operacija ili sustav koji izvlači uzorke iz "kontinuiranog" signala. Cilj sklopa za uzorkovanje je zabilježiti uzorke ekvivalentne njihovim trenutnim vrijednostima u signalu. 
 
-Frekvencija uzorkovanja (eng. \textit{sampling rate} ili \textit{sampling frequency}) je prosječni broj dobavljenih uzoraka u jednoj sekundi te se mjeri u hercima (Hz). Frekvencija uzorkovanja je najčešće iznad 40 kHz radi teorema Nyquista i Shannona, koji tvrdi da je rekonstrukcija signala moguća tek kada je frekvencija uzorkovanja dvostruka veća od frekvencije signala koji se obrađuje.\cite{candes2008introduction} Zvučni signali snimljeni su uglavnom do 20 kHz, budući da je to gornja granica ljudskog sluha.
+Frekvencija uzorkovanja (eng. \textit{sample rate} ili \textit{sampling frequency}) je prosječni broj dobavljenih uzoraka u jednoj sekundi te se mjeri u hercima (Hz). Frekvencija uzorkovanja je najčešće iznad 40 kHz radi teorema Nyquista i Shannona, koji tvrdi da je rekonstrukcija signala moguća tek kada je frekvencija uzorkovanja dvostruka veća od frekvencije signala koji se obrađuje.\cite{candes2008introduction} Zvučni signali snimljeni su uglavnom do 20 kHz, budući da je to gornja granica ljudskog sluha.
 
 Najčešće frekvencije uzorkovanja su 44,1 kHz, 48 kHz, 88,2 kHz ili 96 kHz.\cite{self2012audio} Koriste se uglavnom frekvencije uzorkovanja do 50 kHz jer vrijednosti više od toga ne pridonose zvuku za ljudsko uho, a zauzimaju veću širinu pojasa (eng. \textit{bandwidth}).
 
 \chapter{Algoritam brze Fourierove transformacije - FFT}
 %FFT
-Aplikacija \textit{Spectroid} za detekciju frekvencija koristi algoritam brze Fourierove transformacije (eng. \textit{Fast Fourier Transform} - \textit{FFT}). Algoritam FFT pretvara signal u skup brojeva pomoću kojeg se da raspoznati najzastupljenije frekvencije u signalu. Sposobnost FFT-a da podijeli zvučni signal u frekvencije od kojih se sastoji ga čini jako korisnom metodom koja se često koristi u praksi obrade zvučnih signala.\cite{gustine_2021}
+Aplikacija \textit{Spectroid} za detekciju frekvencija koristi algoritam brze Fourierove transformacije (eng. \textit{Fast Fourier Transform} - \textit{FFT}).\cite{reinke_2018} Algoritam FFT pretvara signal u skup brojeva pomoću kojeg se da raspoznati najzastupljenije frekvencije u signalu. Sposobnost FFT-a da podijeli zvučni signal u frekvencije od kojih se sastoji ga čini jako korisnom metodom koja se često koristi u praksi obrade zvučnih signala.\cite{gustine_2021}
 
 \section{Način rada FFT-a}
 %nacin rada fft
@@ -267,10 +267,92 @@ Kao primjer primjene digitalne obrade signala, odnosno detekcije temeljne frekve
 
 Aplikacija "ZRTuner" (ili punim nazivom "Završni Rad Tuner") za detekciju odsvirane note koristi YIN algoritam te prikazuje odsviranu notu i relativnu udaljenost njene visine tona s visinom tona najbliže note na kromatskoj ljestvici. Pisana je u integriranom razvojnom okruženju (eng. \textit{Integrated Development Environment} - \textit{IDE}) Android Studio-u u programskom jeziku Java te je namijenjena isključivo za Android platforme.
 
+Cilj aplikacije je omogućiti prepoznavanje visine tona odsvirane note te time uputiti korisnika kako naštimati žicu gitare do najbliže note, uključujući oktavu.
+
 \section{TarsosDSP}
 Za implementaciju YIN algoritma ZRTuner koristi TarsosDSP, Java biblioteku (eng. \textit{library}) za obradu zvuka.\cite{six2014tarsosdsp}
 
 Cilj biblioteke je pružiti jednostavno sučelje za implementaciju algoritama za obradu zvuka u glazbi pisano u Javi i bez ikakvih drugih vanjskih ovisnosti. Nastoji uravnotežiti kompleksnu funkcionalnost za uspješnu primjenu, s jednostavnosti za demonstraciju kako algoritmi digitalne obrade signala funkcioniraju.\cite{six_cornelis_lerman}
+
+\section{Značajke sučelja}
+Pri ulasku u aplikaciju prezentirano je sučelje koje se sastoji od navigacijske trake, padajućeg popisa za izbor načina štimanja (eng. \textit{tuning}) i mjerača visine tona.
+
+Navigacijska traka pri vrhu sučelja sastoji se od naslova aplikacije i navigacijskog gumba za postavke. U postavkama moguće je pomoću klizača podesiti koncertnu visinu tona, koja je po standardu zadane vrijednosti od 440 Hz.
+
+Pod navigacijskom trakom nalazi se padajući popis načina štimanja među koje spadaju kromatski (eng. \textit{chromatic tuning}), standardni (eng. \textit{standard tuning}), \textit{drop D} i \textit{open G}. Izbor načina štimanja implementiran je s ciljem da se tražene note mogu lakše izolirati te da se smanji mogućnost pojave grešaka pri prepoznavanju note.
+
+Glavni dio sučelja čini mjerač koji prikazuje razliku između snimljene visine tona i visine tona najbliže note te je razlika izražena u cjelobrojno zaokruženim centima. Mjerač se sastoji od vodoravne trake podijeljena na cjeline negativnih (lijevo) i pozitivnih (desno) vrijednosti, s vrijednosti od 0 u sredini.
+
+Pri prepoznavanju visine tona snimljenog zvuka, mjeraču se pridodaje pokazivač ispod trake koji razliku u visini tonova prikazuje brojem ispod sebe te pokazuje na prikladnu vrijednost na traci. Uz pokazivač, pri dnu sučelja prikazuje se puni naziv note s najbližom visinom tona. U slučaju da je razlika u visini tonova manja ili jednaka 5 centi za duljinu jedne sekunde, boja trake pretvorit će se u zelenu.
+
+\begin{figure}
+	\centerline{\includegraphics[height=0.9\textheight]{zrtuner_gauge.jpeg}}
+	\caption{Početno sučelje aplikacije}
+	\label{fig}
+\end{figure}
+\begin{figure}
+	\centerline{\includegraphics[height=0.9\textheight]{zrtuner_spinner.jpeg}}
+	\caption{Sučelje padajućeg popisa načina štimanja}
+	\label{fig}
+\end{figure}
+\begin{figure}
+	\centerline{\includegraphics[height=0.9\textheight]{zrtuner_note.jpeg}}
+	\caption{Sučelje mjerač pri prepoznatoj visini tona}
+	\label{fig}
+\end{figure}
+\begin{figure}
+	\centerline{\includegraphics[height=0.9\textheight]{zrtuner_gauge_green.jpeg}}
+	\caption{Sučelje mjerača pri maloj razlici u visinama tona}
+	\label{fig}
+\end{figure}
+\begin{figure}
+	\centerline{\includegraphics[height=0.9\textheight]{zrtuner_options_440.jpeg}}
+	\caption{Sučelje postavki s klizačem za koncertnu visinu tona}
+	\label{fig}
+\end{figure}
+\begin{figure}
+	\centerline{\includegraphics[height=0.9\textheight]{zrtuner_options_432.jpeg}}
+	\caption{Sučelje postavki s promijenjenom koncertnom visionom tona}
+	\label{fig}
+\end{figure}
+
+\clearpage
+
+\section{Snimanje i obrada zvuka}
+Aplikacija pri prvom dizanju šalje upit korisniku za dopuštenje snimanja zvuka. Dopuštenjem snimanja zvuka aplikacija kreće u rad, zove metodu \verb|startRecording()| u glavnoj klasi \verb|MainActivity| te pokreće snimanje i obradu zvuka.
+
+\subsection{Stvaranje fragmenta}
+Metoda \verb|startRecording()| instancira objekt klase \verb|FragmentManager| pomoću kojeg će moći instancirati i upravljati objektom klase \verb|ListenerFragment|\cite{gstraube}, koji će u sklopu klase \verb|MainActivity| služiti za pozivanje operacija potrebnih za detekciju visine tona. Aktivnosti (eng. \textit{Activity}) u Android aplikacijama najčešće su predstavljene kao prozori sa sučeljem koji su usredotočeni na obavljanje specifičnog zadatka.
+
+Fragmenti u Android aplikacijama predstavljaju dio korisničkog sučelja s višekratnom uporabom koji služi za obavljanje specifičnih funkcija. Za dodavanje, brisanje i zamjenu fragmenata te upravljanje fragmentima koristi se klasa \verb|FragmentManager|. Klasa \verb|ListenerFragment| nasljeđuje klasu \verb|Fragment| te pomoću objekta klase \verb|FragmentManager| pri inicijalizaciji svog objekta dohvaća instancu svog fragmenta preko oznake "listener\_fragment".
+
+Budući da pri prvome instanciranju fragment te oznake neće biti pronađen (jer još nije instanciran), uz pomoć metode \verb|beginTransaction()| započet će proces stvaranja novog fragmenta s oznakom "listener\_fragment". Metodom \verb|add()|, u glavnoj aktivnosti \verb|MainActivity| stvara se fragment \verb|ListenerFragment|, a metodom \verb|commit()| se taj proces izvršava i završava.
+
+\clearpage
+\renewcommand{\figurename}{Kod}
+\begin{figure}
+	\centerline{\includegraphics[width=\textwidth]{startRecording.png}}
+	\caption{Stvaranje fragmenta za snimanje zvuka}
+	\label{fig}
+\end{figure}
+
+\subsection{Pozadinski proces}
+Stvaranjem fragmenta \verb|ListenerFragment| pokreće se instanca pozadinskog procesa privatne klase \verb|PitchListener|. \verb|PitchListener| nasljeđuje apstraktnu klasu \verb|AsyncTask| kako bi uz metodu \verb|doInBackground| aplikacija u pozadini mogla obrađivati snimljeni zvuk.
+
+Metoda \verb|doInBackground| započinje instanciranjem objekta sučelja za rukovanje visinom tona \verb|PitchDetectionHandler| iz biblioteke TarsosDSP te lambda izrazom definira metodu \verb|handlePitch()|. 
+
+!!!Boolean \verb|IS_RECORDING| u početnom je stanju \verb|false| te će se svaki put kada je u stanju \verb|false| izvršiti metoda \verb|publishProgress()|!!!
+
+Klasom \verb|PitchDetectionResult| pomoću metode \verb|getPitch()| dohvaća se detektirana visina tona iz snimljenog bloka zvučnog signala. U slučaju detektirane visine tona instancira se objekt klase \verb|PitchDifference|, koji predstavlja devijaciju snimljene visine tona od njoj najbliže note. Objekt \verb|pitchDifference| preko klase \verb|PitchComparator| metodom \verb|retrieveNote()| dohvaća najbližu notu i devijaciju u visini tona izraženu u centima te ih kao objekt tipa \verb|PitchDifference| stavlja u niz \verb|pitchDifferences|. U trenutku kada se ovaj postupak ponovi barem \verb|MIN_PITCH_COUNT| puta (po potrebi izabrano 8 puta), izračunat će se prosječna visina tona niza \verb|pitchDifferences| te će metodom \verb|publishProgress()| ta vrijednost biti proslijeđena za prikaz korisniku.
+
+Instanciranjem objekta \verb|pitchDetectionHandler|, njegova vrijednost prosljeđuje se kao argument za instanciranje objekta klase \verb|PitchProcessor| iz biblioteke TarsosDSP, zajedno s enumeracijom YIN algoritma \verb|FFT_YIN|, frekvencijom uzorkovanja \verb|SAMPLE_RATE| tipa \verb|int| i veličinom \textit{buffer}-a \verb|BUFFER_SIZE| tipa \verb|int|. 
+
+Aplikacija koristi frekvenciju uzorkovanja od 44,1 kHz i veličinu \textit{buffer}-a od 4096 uzoraka. Time postiže rezoluciju od 10,77 Hz po uzorku, čime dobiva na brzini, ali gubi na preciznosti među najnižim frekvencijama u rasponu gitare. Ovaj kompromis je prihvatljiv budući da se mogućnost pojave grešaka pri nižim frekvencijama smanjuje na način da se uzastopno mjeri prosjek snimljenih blokova frekvencija. 
+
+Klasa \verb|PitchProcessor| kao implementacija sučelja \verb|AudioProcessor| pruža funkcije namještanja izabranog algoritma za detekciju visine tona. U ovom slučaju se instancira objekt klase \verb|FastYin| koja u biblioteci TarsosDSP implementira YIN algoritam.
+
+Iza instance \verb|pitchProcessor| instancira se objekt klase \verb|AudioDispatcher| koja služi za pretvorbu snimljenih zvučnih signala ili zapisa u obradive blokove. Za specifikaciju izvora zvuka koristi se metodama klase \verb|AudioDispatcherFactory|, u ovom slučaju metode \verb|fromDefaultMicrophone()|, budući da aplikacija obrađuje zvuk snimljen u stvarnom vremenu preko mikrofona na mobilnom uređaju. Kao argumenti joj se proslijeđuju \verb|SAMPLE_RATE|, \verb|BUFFER_SIZE| i veličina preklapanja \verb|OVERLAP| tipa \verb|int|. Veličina preklapanja u ovom slučaju je 3072 uzoraka, što je 75\% veličine \textit{buffer}-a (4096 uzoraka). Drugim riječima, svakih snimljenih 1024 uzoraka, započet će istovremeno snimanje novih 4096 uzoraka. Kao odabir procesora za obradu zvuka, \verb|audioDispatcher| postavlja \verb|pitchProcessor| metodom \verb|addAudioProcessor|. Konačno, snimanje i obrada signala započinje naredbom \verb|audioDispatcher.run()|.
+
 
 
 

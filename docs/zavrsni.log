@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.16)  6 JUN 2022 19:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.16)  7 JUN 2022 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -330,6 +330,27 @@ LaTeX Warning: Label `fig' multiply defined.
 
 LaTeX Warning: Label `fig' multiply defined.
 
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
 )
 \openout1 = `zavrsni.aux'.
 
@@ -583,27 +604,103 @@ Poglavlje 7.
 
 ]
 Poglavlje 8.
+
+Overfull \hbox (5.44699pt too wide) in paragraph at lines 275--276
+[]\T1/ptm/m/n/12 Cilj bi-bli-oteke je pru-ºiti jed-nos-tavno su-£e-lje za im-pl
+e-men-ta-ciju al-go-ri-tama za obradu
+ []
+
 [16
 
 ]
+<./prikazi//zrtuner_gauge.jpeg, id=109, 177.7842pt x 370.986pt>
+File: ./prikazi//zrtuner_gauge.jpeg Graphic file (type jpg)
+<use ./prikazi//zrtuner_gauge.jpeg>
+Package pdftex.def Info: ./prikazi//zrtuner_gauge.jpeg  used on input line 289.
+
+(pdftex.def)             Requested size: 290.87074pt x 606.89317pt.
+<./prikazi//zrtuner_spinner.jpeg, id=110, 177.7842pt x 370.986pt>
+File: ./prikazi//zrtuner_spinner.jpeg Graphic file (type jpg)
+<use ./prikazi//zrtuner_spinner.jpeg>
+Package pdftex.def Info: ./prikazi//zrtuner_spinner.jpeg  used on input line 29
+4.
+(pdftex.def)             Requested size: 290.87074pt x 606.89317pt.
+<./prikazi//zrtuner_note.jpeg, id=111, 177.7842pt x 370.986pt>
+File: ./prikazi//zrtuner_note.jpeg Graphic file (type jpg)
+<use ./prikazi//zrtuner_note.jpeg>
+Package pdftex.def Info: ./prikazi//zrtuner_note.jpeg  used on input line 299.
+(pdftex.def)             Requested size: 290.87074pt x 606.89317pt.
+<./prikazi//zrtuner_gauge_green.jpeg, id=112, 177.7842pt x 370.986pt>
+File: ./prikazi//zrtuner_gauge_green.jpeg Graphic file (type jpg)
+<use ./prikazi//zrtuner_gauge_green.jpeg>
+Package pdftex.def Info: ./prikazi//zrtuner_gauge_green.jpeg  used on input lin
+e 304.
+(pdftex.def)             Requested size: 290.87074pt x 606.89317pt.
+<./prikazi//zrtuner_options_440.jpeg, id=113, 177.7842pt x 370.986pt>
+File: ./prikazi//zrtuner_options_440.jpeg Graphic file (type jpg)
+<use ./prikazi//zrtuner_options_440.jpeg>
+Package pdftex.def Info: ./prikazi//zrtuner_options_440.jpeg  used on input lin
+e 309.
+(pdftex.def)             Requested size: 290.87074pt x 606.89317pt.
+<./prikazi//zrtuner_options_432.jpeg, id=114, 177.7842pt x 370.986pt>
+File: ./prikazi//zrtuner_options_432.jpeg Graphic file (type jpg)
+<use ./prikazi//zrtuner_options_432.jpeg>
+Package pdftex.def Info: ./prikazi//zrtuner_options_432.jpeg  used on input lin
+e 314.
+(pdftex.def)             Requested size: 290.87074pt x 606.89317pt.
+ [17] [18 <./prikazi//zrtuner_gauge.jpeg>] [19 <./prikazi//zrtuner_spinner.jpeg
+>] [20 <./prikazi//zrtuner_note.jpeg>] [21 <./prikazi//zrtuner_gauge_green.jpeg
+>] [22 <./prikazi//zrtuner_options_440.jpeg>] [23 <./prikazi//zrtuner_options_4
+32.jpeg>]
+Overfull \hbox (0.95305pt too wide) in paragraph at lines 325--326
+\T1/ptm/m/n/12 Metoda [][]\T1/pcr/m/n/12 startRecording() []\T1/ptm/m/n/12 ins-
+tan-cira objekt klase [][]\T1/pcr/m/n/12 FragmentManager []\T1/ptm/m/n/12 po-mo
+¢u
+ []
+
+
+Overfull \hbox (0.24344pt too wide) in paragraph at lines 327--328
+\T1/ptm/m/n/12 za-mjenu frag-me-nata te uprav-lja-nje frag-men-tima ko-risti se
+ klasa [][]\T1/pcr/m/n/12 FragmentManager[]\T1/ptm/m/n/12 .
+ []
+
+[24
+
+]
+<./prikazi//startRecording.png, id=140, 537.50812pt x 234.1247pt>
+File: ./prikazi//startRecording.png Graphic file (type png)
+<use ./prikazi//startRecording.png>
+Package pdftex.def Info: ./prikazi//startRecording.png  used on input line 334.
+
+(pdftex.def)             Requested size: 412.56497pt x 179.7014pt.
+
+Overfull \hbox (2.81233pt too wide) in paragraph at lines 340--341
+\T1/ptm/m/n/12 cesa pri-vatne klase [][]\T1/pcr/m/n/12 PitchListener[]\T1/ptm/m
+/n/12 . [][]\T1/pcr/m/n/12 PitchListener []\T1/ptm/m/n/12 na-s-lje-žuje ap-s-tr
+ak-tnu klasu
+ []
+
+[25
+
+ <./prikazi//startRecording.png>] [26]
 Poglavlje 9.
-(./zavrsni.bbl [17
+(./zavrsni.bbl [27
 
-] [18
+] [28
 
-]) [19] [20] (./zavrsni.aux)
+]) [29] [30] (./zavrsni.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8853 strings out of 478371
- 143981 string characters out of 5852527
- 461282 words of memory out of 5000000
- 26790 multiletter control sequences out of 15000+600000
- 458841 words of font info for 95 fonts, out of 8000000 for 9000
+ 8918 strings out of 478371
+ 146018 string characters out of 5852527
+ 461314 words of memory out of 5000000
+ 26845 multiletter control sequences out of 15000+600000
+ 459948 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,17n,77p,757b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,17n,77p,1014b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1
@@ -618,10 +715,10 @@ lvetic/uhvb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.p
 fb><c:/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/202
 1/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2021/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on zavrsni.pdf (25 pages, 2681195 bytes).
+Output written on zavrsni.pdf (35 pages, 3015068 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
+ 227 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

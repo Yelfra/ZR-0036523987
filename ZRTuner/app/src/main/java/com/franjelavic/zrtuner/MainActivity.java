@@ -33,10 +33,8 @@ public class MainActivity extends AppCompatActivity implements ListenerFragment.
 
     public static final String CURRENT_TUNING = "current_tuning";
     protected static final String REFERENCE_PITCH = "reference_pitch";
-    private static final String TAG_LISTENER_FRAGMENT = "listener_fragment";
     private static int tuningPosition = 0;
     private static int referencePitch;
-
     public static Tuning getCurrentTuning() {
         return TuningOption.getTuning(tuningPosition);
     }
@@ -74,18 +72,13 @@ public class MainActivity extends AppCompatActivity implements ListenerFragment.
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch(item.getItemId()) {
-            case (R.id.action_settings): {
-
-                Intent intent = new Intent(this, SettingsActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_from_left);
-                return true;
-            }
-            default: {
-                return super.onOptionsItemSelected(item);
-            }
+        if (item.getItemId() == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_from_left);
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -96,13 +89,18 @@ public class MainActivity extends AppCompatActivity implements ListenerFragment.
         pitchMeter.invalidate();
     }
 
+    private static final String TAG_LISTENER_FRAGMENT = "listener_fragment";
+
     private void startRecording() {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        ListenerFragment listenerFragment = (ListenerFragment) fragmentManager.findFragmentByTag(TAG_LISTENER_FRAGMENT);
+        ListenerFragment listenerFragment =
+                (ListenerFragment) fragmentManager.findFragmentByTag(TAG_LISTENER_FRAGMENT);
 
         if (listenerFragment == null) {
             listenerFragment = new ListenerFragment();
-            fragmentManager.beginTransaction().add(listenerFragment, TAG_LISTENER_FRAGMENT).commit();
+            fragmentManager.beginTransaction()
+                    .add(listenerFragment, TAG_LISTENER_FRAGMENT)
+                    .commit();
         }
     }
 

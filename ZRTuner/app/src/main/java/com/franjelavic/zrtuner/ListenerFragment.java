@@ -19,7 +19,7 @@ public class ListenerFragment extends Fragment {
     private static final int SAMPLE_RATE = 44100;
     private static final int BUFFER_SIZE = 1024 * 4;
     private static final int OVERLAP = 768 * 4;
-    private static final int MIN_ITEMS_COUNT = 15;
+    private static final int MIN_PITCH_COUNT = 8;
     static boolean IS_RECORDING;
     private static List<PitchDifference> pitchDifferences = new ArrayList<>();
     private static TaskCallbacks taskCallbacks;
@@ -34,8 +34,6 @@ public class ListenerFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setRetainInstance(true);
 
         PitchListener pitchListener = new PitchListener();
         pitchListener.execute();
@@ -66,7 +64,7 @@ public class ListenerFragment extends Fragment {
 
                     pitchDifferences.add(pitchDifference);
 
-                    if (pitchDifferences.size() >= MIN_ITEMS_COUNT) {
+                    if (pitchDifferences.size() >= MIN_PITCH_COUNT) {
                         PitchDifference average = Sampler.calculateAverageDifference(pitchDifferences);
 
                         publishProgress(average);

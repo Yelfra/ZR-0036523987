@@ -68,6 +68,10 @@ Douglas Self.
 \newblock {\em Audio engineering explained}.
 \newblock Routledge, 2012.
 
+\bibitem{reinke_2018}
+Carl Reinke.
+\newblock Spectroid, 2018.
+
 \bibitem{lourde2009digital}
 Mary Lourde and Anjali~Kuppayil Saji.
 \newblock A digital guitar tuner.
@@ -91,5 +95,9 @@ Joren Six, Olmo Cornelis, and Marc Leman.
 \bibitem{six_cornelis_lerman}
 Joren Six, Olmo Cornelis, and Marc Lerman.
 \newblock Tarsosdsp: A real-time audio processing framework in java.
+
+\bibitem{gstraube}
+Gstraube.
+\newblock Cythara: A musical instrument tuner for android.
 
 \end{thebibliography}
